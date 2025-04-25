@@ -1,0 +1,4 @@
+
+<SafeAreaView style={{ marginTop: 30}}>
+<Home/>
+</SafeAreaView>

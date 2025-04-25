@@ -1,0 +1,20 @@
+
+
+const[dados, setDados] = useState<Array<string>>([]);
+
+ const addTask = async(title: string) => {
+ const novosDados = [...dados, { id: Date.now().toString(), title, completed: false }]
+    setDados(novosDados);
+ };
+
+  await AsyncStorage.setItem('tarefas', JSON.stringify(novosDados))
+
+const caregarDados = async() => {
+    const dadosSalvos = await AsyncStorage.getItem('tarefas')
+    if(!dadosSalvos) return;
+    setDados(JSON.parse(dadosSalvos));
+}
+
+useEffect (() => {
+    caregarDados();
+}, [])
