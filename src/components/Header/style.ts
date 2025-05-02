@@ -5,16 +5,17 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 16,
+    paddingTop:8,
+    paddingHorizontal: 16,
     backgroundColor: '#fff',
   },
   menu: {
     fontSize: 24,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
+  logo: {
+    width: 160,     
+    height: 36,
+  },   
   cart: {
     fontSize: 24,
   },

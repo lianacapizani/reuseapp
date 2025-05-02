@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import styles from './style';
+
 
 function Header() { 
   return (
@@ -8,9 +10,13 @@ function Header() {
       <TouchableOpacity>
         <Text style={styles.menu}>☰</Text>
       </TouchableOpacity>
-      <Text style={styles.title}>ReUSE!</Text>
+      <Image
+        source={require('../../../assets/logo.png')} // ajuste o caminho conforme seu projeto
+        style={styles.logo}
+        resizeMode="contain"
+      />
       <TouchableOpacity>
-        <Text style={styles.cart}>🛒</Text>
+        <Ionicons name="cart-outline" size={24} color="black" />
       </TouchableOpacity>
     </View>
   );

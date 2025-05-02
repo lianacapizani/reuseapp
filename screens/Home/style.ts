@@ -1,8 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  container: {
+    backgroundColor: '#fff',
+    paddingVertical: 16,
   },
 });

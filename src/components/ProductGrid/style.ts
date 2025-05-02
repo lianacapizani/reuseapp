@@ -4,11 +4,12 @@ export default StyleSheet.create({
     section: {
     paddingHorizontal: 16,
     marginBottom: 24,
+    marginTop: 16,
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 12,
+    marginBottom: 16,
   },
   title: {
     fontSize: 18,

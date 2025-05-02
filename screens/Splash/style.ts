@@ -26,5 +26,6 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 12,
     color: '#999',
+    paddingHorizontal: -40,
   },
 });

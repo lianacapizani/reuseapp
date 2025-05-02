@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, View } from 'react-native';
+import { FlatList, View, SafeAreaView } from 'react-native';
 import Header from '../../src/components/Header';
 import SearchBar from '../../src/components/SearchBar';
 import Carousel from '../../src/components/Carousel';
@@ -8,19 +8,21 @@ import styles from './style';
 
 function Home() {
   return (
-    <FlatList
-      data={[]} // pode ser vazio se você só quiser usar a rolagem
-      ListHeaderComponent={() => (
-        <View style={styles.container}>
-          <Header />
-          <SearchBar />
-          <Carousel />
-          <ProductGrid title="Lançamentos" />
-          <ProductGrid title="Mais visualizados" />
-        </View>
-      )}
-      renderItem={null} // ou () => null
-    />
+    <SafeAreaView style={styles.safeArea}>
+      <FlatList
+        data={[]}
+        ListHeaderComponent={() => (
+          <View style={styles.container}>
+            <Header />
+            <SearchBar />
+            <Carousel />
+            <ProductGrid title="Lançamentos" />
+            <ProductGrid title="Mais visualizados" />
+          </View>
+        )}
+        renderItem={null}
+      />
+    </SafeAreaView>
   );
 }
 
