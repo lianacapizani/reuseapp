@@ -1,15 +1,30 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  background: {
+  container: {
     flex: 1,
-    resizeMode: 'cover',
+    backgroundColor: '#fff', // fundo branco
     justifyContent: 'center',
     alignItems: 'center',
+    paddingHorizontal: 80,
   },
-  overlay: {
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    padding: 20,
-    borderRadius: 12,
+  logo: {
+    width: 320,
+    height: 320,
+    marginBottom: 32, // espaço entre logo e texto
+    marginTop: -160, // "puxa" a logo para cima do centro
+  },
+  slogan: {
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#000',
+    lineHeight: 24,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 20,
+    textAlign: 'center',
+    fontSize: 12,
+    color: '#999',
   },
 });

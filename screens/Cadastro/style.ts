@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    fontFamily: "poppins",
+    fontFamily: 'poppins',
     flex: 1,
     backgroundColor: '#FBFBFB',
   },
@@ -11,17 +11,17 @@ export default StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     paddingHorizontal: 60,
-    paddingTop: 80,
+    paddingTop: 40,
   },
   logo: {
     width: 180,
     height: 180,
     resizeMode: 'contain',
-    marginBottom: 60,
+    marginBottom: 32,
   },
   title: {
     fontSize: 22,
-    fontWeight: 'semibold',
+    fontWeight: '600',
     marginBottom: 32,
     color: '#2A2B67',
   },
@@ -53,17 +53,17 @@ export default StyleSheet.create({
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 12,
   },
   buttonText: {
     color: '#fff',
     fontSize: 16,
   },
-  
-signupLink: {
-  marginTop: 80,
-  color: '#2A2B67',
-  fontSize: 14,
-  textAlign: 'center',
-  textDecorationLine: 'underline',
-},
+  signupLink: {
+    marginTop: 40,
+    color: '#2A2B67',
+    fontSize: 14,
+    textAlign: 'center',
+    textDecorationLine: 'underline',
+  },
 });

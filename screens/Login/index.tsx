@@ -50,7 +50,7 @@ function Login() {
         contentContainerStyle={styles.inner}
         keyboardShouldPersistTaps="handled"
       >
-        <Image source={require('../../assets/logo2.png')} style={styles.logo} />
+        <Image source={require('../../assets/logo.png')} style={styles.logo} />
 
         <Text style={styles.title}>Login</Text>
 

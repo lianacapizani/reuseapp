@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ImageBackground, View, ActivityIndicator } from 'react-native';
+import {Image, Text, View, ActivityIndicator } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../routes/types';
@@ -19,15 +19,21 @@ function SplashScreen() {
   }, []);
 
   return (
-    <ImageBackground
-      source={require('../../assets/splash-bg.png')} // use sua imagem de fundo aqui
-      style={styles.background}
-    >
-      <View style={styles.overlay}>
-        <ActivityIndicator size="large" color="#fff" />
-      </View>
-    </ImageBackground>
+    <View style={styles.container}>
+      <Image
+        source={require('../../assets/logo.png')}
+        style={styles.logo}
+        resizeMode="contain"
+      />
+      <Text style={styles.slogan}>
+        "Menos descarte, mais atitude. Com o Reuse, o que é bom ganha uma nova chance."
+      </Text>
+      <Text style={styles.footer}>
+        © 2024 Compre e Troque. Todos os direitos reservados.
+      </Text>
+    </View>
   );
+  
 }
 
 export default SplashScreen;
