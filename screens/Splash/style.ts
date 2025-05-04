@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff', // fundo branco
+    backgroundColor: '#f1f1f1', 
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 80,
@@ -11,7 +11,7 @@ export default StyleSheet.create({
   logo: {
     width: 320,
     height: 320,
-    marginBottom: 32, // espaço entre logo e texto
+    marginBottom: 32,
     marginTop: -160, // "puxa" a logo para cima do centro
   },
   slogan: {

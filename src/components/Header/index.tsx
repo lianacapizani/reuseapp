@@ -1,17 +1,20 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, TouchableOpacity, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import styles from './style';
 
 
 function Header() { 
+  const navigation = useNavigation(); 
+  
   return (
     <View style={styles.container}>
       <TouchableOpacity>
-        <Text style={styles.menu}>☰</Text>
+        <Ionicons name="menu-outline" size={24} color="black" />
       </TouchableOpacity>
       <Image
-        source={require('../../../assets/logo.png')} // ajuste o caminho conforme seu projeto
+        source={require('../../../assets/logo.png')}
         style={styles.logo}
         resizeMode="contain"
       />

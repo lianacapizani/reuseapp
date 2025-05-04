@@ -29,7 +29,7 @@ function SplashScreen() {
         "Menos descarte, mais atitude. Com o Reuse, o que é bom ganha uma nova chance."
       </Text>
       <Text style={styles.footer}>
-        © 2024 Compre e Troque. Todos os direitos reservados.
+        © 2025 ReUSE. Todos os direitos reservados.
       </Text>
     </View>
   );

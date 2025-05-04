@@ -16,7 +16,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
   },
   viewMore: {
-    color: '#E94600',
+    color: '#57A29E',
   },
   card: {
     width: '30%',

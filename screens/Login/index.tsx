@@ -11,12 +11,14 @@ import {
   ScrollView,
 } from 'react-native';
 import { Checkbox } from 'react-native-paper';
-import styles from './style';
-import SocialLogin from '../../src/components/SocialLogin';
 import { useNavigation } from '@react-navigation/native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../src/services/firebaseConfig';
+import { Ionicons } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import SocialLogin from '../../src/components/SocialLogin';
+import styles from './style';
+
 
 
 function Login() {
@@ -50,6 +52,9 @@ function Login() {
         contentContainerStyle={styles.inner}
         keyboardShouldPersistTaps="handled"
       >
+        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+          <Ionicons name="arrow-back" size={24} color="#016DAD" />
+        </TouchableOpacity>
         <Image source={require('../../assets/logo.png')} style={styles.logo} />
 
         <Text style={styles.title}>Login</Text>

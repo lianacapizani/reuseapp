@@ -7,6 +7,9 @@ import SplashScreen from '../screens/Splash';
 import Login from '../screens/Login';
 import Home from '../screens/Home';
 import Cadastro from '../screens/Cadastro';
+import Favorites from '../screens/Favorites';
+import Categories from '../screens/Categories';
+import Perfil from '../screens/Perfil';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -14,6 +17,8 @@ const Tabs = createBottomTabNavigator();
 function TabRoutes() {
   const icons = {
     Inicio: 'home-outline',
+    Favoritos: 'heart-outline',
+    Categorias: 'grid-outline',
     Perfil: 'person-outline',
   };
 
@@ -30,7 +35,9 @@ function TabRoutes() {
       })}
     >
     <Tabs.Screen name="Inicio" component={Home} />
-    <Tabs.Screen name="Perfil" component={Login} />
+    <Tabs.Screen name="Favoritos" component={Favorites} />
+    <Tabs.Screen name="Categorias" component={Categories} />
+    <Tabs.Screen name="Perfil" component={Perfil} />
   </Tabs.Navigator>
   );
 }
@@ -41,8 +48,10 @@ export default function Routes() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Splash" component={SplashScreen} />
         <Stack.Screen name="Main" component={TabRoutes} />
-        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Perfil" component={Perfil} />
         <Stack.Screen name="Cadastro" component={Cadastro} />
+        <Stack.Screen name="Favoritos" component={Favorites} />
+        <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   );

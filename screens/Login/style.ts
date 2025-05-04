@@ -13,6 +13,11 @@ export default StyleSheet.create({
     paddingHorizontal: 60,
     paddingTop: 80,
   },
+  backButton: {
+    alignSelf: 'flex-start',
+    marginBottom: -40, 
+    marginLeft: -36, 
+  },  
   logo: {
     width: 180,
     height: 180,
