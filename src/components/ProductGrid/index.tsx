@@ -1,17 +1,35 @@
-import React from 'react';
-import { View, Text, Image, FlatList } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, Image, FlatList, ActivityIndicator } from 'react-native';
 import styles from './style';
 
-const products = [
-  { id: '1', name: 'Produto 1', price: 'R$ 10,00', image: require('../../../assets/produto1.png') },
-  { id: '2', name: 'Produto 2', price: 'R$ 20,00', image: require('../../../assets/produto2.png') },
-  { id: '3', name: 'Produto 3', price: 'R$ 30,00', image: require('../../../assets/produto3.png') },
-  { id: '4', name: 'Produto 4', price: 'R$ 40,00', image: require('../../../assets/produto4.png') },
-  { id: '5', name: 'Produto 5', price: 'R$ 50,00', image: require('../../../assets/produto5.png') },
-  { id: '6', name: 'Produto 6', price: 'R$ 60,00', image: require('../../../assets/produto6.png') },
-];
+type Product = {
+  id: string;
+  name: string;
+  price: string;
+  image: string;
+};
 
 function ProductGrid({ title }: { title: string }) {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://run.mocky.io/v3/ab6bb7c0-f168-49a3-ac39-6c05ed11203a')
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Erro ao buscar produtos:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <ActivityIndicator size="large" color="#57A29E" />;
+  }
+
   return (
     <View style={styles.section}>
       <View style={styles.header}>
@@ -24,7 +42,7 @@ function ProductGrid({ title }: { title: string }) {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <View style={styles.card}>
-            <Image source={item.image} style={styles.image} />
+            <Image source={{ uri: item.image }} style={styles.image} />
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.price}>{item.price}</Text>
           </View>
@@ -32,6 +50,6 @@ function ProductGrid({ title }: { title: string }) {
       />
     </View>
   );
-};
+}
 
 export default ProductGrid;
