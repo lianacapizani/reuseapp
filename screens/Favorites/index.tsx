@@ -11,9 +11,9 @@ return(
         <HeaderPage titulo="Favoritos" destino="Perfil" />
         <View style={styles.container}>
             <TouchableOpacity>
-                <Ionicons style={styles.icon} name="construct-sharp" size={36} color="black" />
+                <Ionicons name="construct-sharp" size={36} color="black" />
             </TouchableOpacity>
-            <Text style={styles.text}> Página em construção </Text>
+            <Text style={styles.text}>Página em construção</Text>
         </View>
     </SafeAreaView>
     )

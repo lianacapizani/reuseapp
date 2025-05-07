@@ -21,11 +21,11 @@ function HeaderPage ({ titulo, destino }: HeaderPageProps) {
 
     return(
         <View style={styles.header}>
-        <TouchableOpacity onPress={handlePress}>
-          <Ionicons name="arrow-back" size={24} color="#016DAD" />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>{titulo}</Text>
-        <View style={{ width: 24 }} /> {/* para alinhar o título no centro */}
+          <TouchableOpacity onPress={handlePress}>
+            <Ionicons name="arrow-back" size={24} color="#016DAD" />
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>{titulo}</Text>
+          <View style={{ width: 24 }} /> {/* para alinhar o título no centro */}
       </View>
     )
 }

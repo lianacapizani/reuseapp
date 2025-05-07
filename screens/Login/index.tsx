@@ -19,8 +19,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import SocialLogin from '../../src/components/SocialLogin';
 import styles from './style';
 
-
-
 function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');

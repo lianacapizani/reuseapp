@@ -19,7 +19,7 @@ export default StyleSheet.create({
     color: '#57A29E',
   },
   card: {
-    width: '33%',
+    width: '30%',
     margin: '2%',
     backgroundColor: '#f9f9f9', // opcional, para destacar
     padding: 8,
