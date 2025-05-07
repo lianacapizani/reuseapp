@@ -4,11 +4,12 @@ export default StyleSheet.create({
     container: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F0F0F0',
+    backgroundColor: '#CAE3E490',
     paddingHorizontal: 10,
-    paddingVertical: 10,
+    paddingVertical: 12,
     borderRadius: 8,
-    margin: 16,
+    marginHorizontal: 16,
+    marginVertical: 10,
   },
   input: {
     marginLeft: 8,

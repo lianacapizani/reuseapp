@@ -10,7 +10,7 @@ export default StyleSheet.create({
     backgroundColor: '#fff',
   },
   logo: {
-    width: 200,     
+    width:160,     
     height: 48,
   },   
 });

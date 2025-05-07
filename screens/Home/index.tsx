@@ -5,6 +5,7 @@ import SearchBar from '../../src/components/SearchBar';
 import Carousel from '../../src/components/Carousel';
 import ProductGrid from '../../src/components/ProductGrid';
 import styles from './style';
+import CepArea from '../../src/components/CepArea';
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
           <View style={styles.container}>
             <Header />
             <SearchBar />
+            <CepArea />
             <Carousel />
             <ProductGrid title="Lançamentos" />
             <ProductGrid title="Mais visualizados" />
