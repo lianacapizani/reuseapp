@@ -64,23 +64,23 @@ Com o repositório clonado, instale as dependências do projeto usando o `npm` o
 
 #### Usando o npm:
 
-    ```bash
-    npm install
-    ```
+```bash
+npm install
+```
 
 #### Usando o Yarn:
 
-    ```bash
-    yarn install
-    ```
+```bash
+yarn install
+```
 
 4. Inicie o projeto com Expo: 
 
 Com as dependências instaladas, você pode iniciar o servidor de desenvolvimento do Expo com o comando:
 
-    ```bash
-    npx expo start
-    ```
+```bash
+npx expo start
+```
 
 ---
 
